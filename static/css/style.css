@@ -10,6 +10,21 @@
     height: 50px;
 }
 
+/* navbar */
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--brand);
+}
+
+.navbar-nav>li>a:hover {
+    color: var(--brand);
+}
+
 /* body */
 body {
     font-family: sans-serif;
@@ -23,8 +38,7 @@ h2,
 h3,
 h4,
 h5,
-h6
-{
+h6 {
     font-weight: 600;
     color: var(--dark);
 }

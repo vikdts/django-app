@@ -116,4 +116,5 @@ footer a {
     background: url(https://res.cloudinary.com/dmux1cvft/image/upload/v1702557741/pexels-rachel-claire-4997875_vnlgfn.jpg);
     background-position: center;
     background-size: cover;
+    margin-top: -150px;
 }

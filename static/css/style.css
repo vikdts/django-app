@@ -1,4 +1,30 @@
+/* vars */
+:root {
+    --dark: #212529;
+    --brand: #619b8a;
+    --body: #727272;
+}
+
 /* logo */
 .logo {
     height: 50px;
+}
+
+/* body */
+body {
+    font-family: sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-weight: 600;
+    color: var(--dark);
 }

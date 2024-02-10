@@ -28,3 +28,24 @@ h6
     font-weight: 600;
     color: var(--dark);
 }
+
+/* Btn */
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: white;
+    border-color: var(--dark);
+    color: var(--dark);
+}
+
+.btn-brand:hover {
+    background-color: white;
+    border-color: var(--brand);
+    color: var(--brand);
+}

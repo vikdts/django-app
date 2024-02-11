@@ -118,3 +118,9 @@ footer a {
     background-size: cover;
     margin-top: -150px;
 }
+
+/* section */
+.section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}

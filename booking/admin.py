@@ -5,3 +5,7 @@ from booking.models import Booking, Table
 class BookingAdmin(admin.ModelAdmin):
     model = Booking
     list_display = ('name', 'email_address', 'phone', 'date', 'num_guests', 'time', 'note')
+    
+@admin.register(Table)
+class TableAdmin(admin.ModelAdmin):
+    list_display = ('seating_capacity', 'availble')

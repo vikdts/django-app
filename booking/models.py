@@ -23,6 +23,11 @@ class Table(models.Model):
     seating_capcity = models.IntegerField(choices=SEATING_CHOICES)
     available = models.BooleanField(default=True)
     
+    def is_available(self):
+        return self.available
+    
+    is_available.boolean = True
+    
     
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

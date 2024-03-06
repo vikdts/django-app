@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-vikdts-django-app-og7q1sbhco.us2.codeanyapp.com',
-                 'django-app-08f2d4b673c2.herokuapp.com']
+                 'django-app-08f2d4b673c2.herokuapp.com', '127.0.0.1']
 
 
 # Application definition

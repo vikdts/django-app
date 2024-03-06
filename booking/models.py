@@ -22,3 +22,18 @@ class Table(models.Model):
     ]
     seating_capcity = models.IntegerField(choices=SEATING_CHOICES)
     available = models.BooleanField(default=True)
+    
+    
+class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100, blank=False)
+    email_address = models.EmailField(blank=False)
+    phone = models.CharField(max_length=20, blank=False, default='')
+    date = models.DateField()
+    num_guests = models.IntegerField()
+    table = models.ForeignKey(Table, on_delete=models.CASCADE, default=1)
+    time = models.CharField(max_length=50, choices=TIME_CHOICE, blank=False, default='18:00')
+    note = models.TextField(max_length-250, null=True, blank=True)
+    
+    def __str__(self):
+        return f"Booking {self.id}, User: {self.user}"

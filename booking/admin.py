@@ -8,4 +8,4 @@ class BookingAdmin(admin.ModelAdmin):
     
 @admin.register(Table)
 class TableAdmin(admin.ModelAdmin):
-    list_display = ('seating_capacity', 'availble')
+    list_display = ('seating_capacity', 'available')

@@ -20,7 +20,7 @@ class Table(models.Model):
         (5,'9-10 Guests'),
         (6,'11-12 Guests'),
     ]
-    seating_capcity = models.IntegerField(choices=SEATING_CHOICES)
+    seating_capacity = models.IntegerField(choices=SEATING_CHOICES)
     available = models.BooleanField(default=True)
     
     def is_available(self):

@@ -6,6 +6,8 @@ class CalendarInput(DateInput):
     input_type = 'date'
 
 class BookingForm(forms.ModelForm):
+    date = forms.DateField(widget=CalendarInput)
+    
     class Meta:
         model = Booking
         fields = ['name', 'email_address', 'phone', 'date', 'num_guests', 'time', 'note']

@@ -33,7 +33,7 @@ class Booking(models.Model):
     num_guests = models.IntegerField()
     table = models.ForeignKey(Table, on_delete=models.CASCADE, default=1)
     time = models.CharField(max_length=50, choices=TIME_CHOICE, blank=False, default='18:00')
-    note = models.TextField(max_length-250, null=True, blank=True)
+    note = models.TextField(max_length=250, null=True, blank=True)
     
     def __str__(self):
         return f"Booking {self.id}, User: {self.user}"

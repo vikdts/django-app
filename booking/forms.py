@@ -1,5 +1,6 @@
 from django import forms
 from .models import Booking
+from django.forms.widgets import DateInput
 
 class BookingForm(forms.ModelForm):
     class Meta:

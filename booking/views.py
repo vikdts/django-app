@@ -126,3 +126,18 @@ def update_booking(request, pk):
     else:
         form = BookingForm(instance=booking)
     return render(request, 'update_booking.html', {'form': form, 'pk': pk, 'booking': booking})
+
+
+@login_required
+def delete_booking(request, pk):
+    """
+    Create delete booking functionality for user,
+    get booking table, mark availble and delete booking.
+
+    """
+    booking = get_object_or_404(Booking, pk=pk)
+    table = booking.table
+    table.available = True
+    table.save()
+    booking.delete()
+    return redirect('bookings')

@@ -1,3 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+            <div class="d-flex justify-content-center">
+                {% for booking in bookings %}
+                <div class="card-wrapper p-3"> <!-- Added p-3 for padding -->
+                    <div class="card" style="min-width: 200px;">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <strong>Name:</strong> {{ booking.name }}<br>
+                                <strong>Email:</strong> {{ booking.email_address }}<br>
+                                <strong>Phone:</strong> {{ booking.phone }}<br>
+
+                                <strong>Date:</strong> {{ booking.date }}<br>
+                                <strong>Guests:</strong> {{ booking.num_guests }}<br>
+                                <strong>Guests:</strong> {{ booking.time }}<br>
+
+                                <strong>Note:</strong> {{ booking.note }}<br>
+                            </p>
+                            <a href="{% url 'update_booking' booking.pk %}" class="btn">Update</a>
+                            <a href="{% url 'delete_booking' booking.pk %}" class="btn">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

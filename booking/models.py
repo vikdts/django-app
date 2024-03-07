@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
+
 TIME_CHOICE = (
     ('18:00', '18:00'),
     ('18:30', '18:30'),
@@ -12,6 +14,10 @@ TIME_CHOICE = (
 )
 
 class Table(models.Model):
+    """
+    Add a new Table as Admin in admin panel.
+    
+    """
     SEATING_CHOICES = [
         (1,'1-2 Guests'),
         (2,'3-4 Guests'),
@@ -30,6 +36,11 @@ class Table(models.Model):
     
     
 class Booking(models.Model):
+    """
+    This class handles information, about each users booking, 
+    like name, email, phone, date, num_guests, table, time, notes.
+    
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100, blank=False)
     email_address = models.EmailField(blank=False)

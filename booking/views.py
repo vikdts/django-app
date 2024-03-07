@@ -11,11 +11,6 @@ class HomeView(generic.TemplateView):
     """
     template_name = 'index.html'
     
-class BookingsView(generic.TemplateView):
-    """
-    Add generic view for bookings page.
-    """
-    template_name = 'bookings.html'
 
 @login_required
 def create_booking(request):

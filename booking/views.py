@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from .forms import BookingForm
+from .models import Booking
 
 
 class HomeView(generic.TemplateView):
@@ -33,3 +34,4 @@ def create_booking(request):
     else:
         form = BookingForm()
     return render(request, 'book.html', {'form': form})
+

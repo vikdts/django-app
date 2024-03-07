@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<section id="menu" class="min-vh-100 d-flex align-items-center text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-uppercase text-white fw-semibold display-1">
+          Salt of the Earth
+        </h1>
+        <p class="text-white mt-3 mb-4">
+            Indulge yourself in a culinary voyage to the Mediterranean with our exquisite array of dishes at Salt of the Earth. 
+            With vibrant flavors and rich traditions of this sun-drenched region, where every bite 
+            tells a story of fresh ingredients, expertly crafted recipes, and the warmth of the Mediterranean. 
+            From sizzling grilled kebabs to zesty citrus-infused salads, each dish is a celebration of the sea, sun, 
+            and soil that define this beloved cuisine. Join us and experience a feast for the senses that will transport 
+            you to the azure shores and bustling markets of the Mediterranean. Come taste the magic of Salt of The Earth.
+        </p>
+      </div>
+      {% if user.is_authenticated %}
+      <div>
+        <a href="{% url 'create_booking' %}" class="btn btn-light ms-2">BOOK NOW</a>
+      </div>
+      {% else %}
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+{% endblock %}

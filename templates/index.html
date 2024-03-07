@@ -10,9 +10,13 @@
           Indulge your senses with the essence of the Mediterranean.
         </h5>
       </div>
+      {% if user.is_authenticated %}
+      {% else %}
       <div>
-        <a href="" class="btn btn-light ms-2">BOOK NOW</a>
+        <a href="{% url 'account_login' %}" class="btn btn-light ms-2">BOOK NOW</a>
       </div>
+      {% endif %}
+
     </div>
   </div>
 </section>

@@ -10,3 +10,20 @@ class HomeView(generic.TemplateView):
     """
     template_name = 'index.html'
 
+@login_required
+def create_booking(request):
+    """
+    This function creates and validates the booking form upon post 
+    request, if successful redirects to bookings.html, else creates and
+    empty form.
+
+    """
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            booking = form.save()
+            booking.user = request.user
+            return redirect('bookings')
+    else:
+        form = BookingForm()
+    return render(request, 'book.html', {'form': form})

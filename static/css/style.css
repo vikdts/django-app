@@ -34,7 +34,12 @@ a {
 body {
     font-family: sans-serif;
     line-height: 1.7;
-    color: var(--body);
+    background-color: var(--body);
+}
+
+#form{
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 /* headings */

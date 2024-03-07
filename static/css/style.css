@@ -37,7 +37,7 @@ body {
     background-color: var(--body);
 }
 
-#form{
+.form{
     margin-top: 100px;
     margin-bottom: 100px;
 }

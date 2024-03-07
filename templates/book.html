@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="row justify-content-center">
-  <div id="form" class="col-lg-8">
+  <div class="col-lg-8 form">
     {% if user.is_authenticated %}
       <form method="post" action="{% url 'create_booking' %}" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
         {% csrf_token %}

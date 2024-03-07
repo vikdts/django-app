@@ -35,3 +35,11 @@ def create_booking(request):
         form = BookingForm()
     return render(request, 'book.html', {'form': form})
 
+@login_required
+def read_booking(request):
+    """
+    This function renders user bookings.
+
+    """
+    bookings = Booking.objects.filter(user=request.user)
+    return render(request, 'bookings.html', {'bookings': bookings})

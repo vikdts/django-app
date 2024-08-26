@@ -2,7 +2,7 @@
 name: Epics
 about: This is my default epics template
 title: 'EPICS: <TITLE>'
-labels: ''
+labels: epic
 assignees: ''
 
 ---

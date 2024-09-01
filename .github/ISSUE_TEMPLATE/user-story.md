@@ -1,13 +1,13 @@
 ---
 name: User Story
 about: This is my default user story template
-title: 'USER STORY: <TITLE>'
+title: 'USER STORY S1.1: <TITLE>'
 labels: story
 assignees: ''
 
 ---
 
-Epic:
+Epic: #1
 
 ### Description
 
